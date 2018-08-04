@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 MAINTAINER kobyahron@gmail.com
 
-RUN apk add git coreutils wget sed && \
+RUN apk add bash coreutils git sed wget && \
 	mkdir -p /opt/repo-cleaner && \
 	wget -O /opt/repo-cleaner/bfg.jar http://repo1.maven.org/maven2/com/madgag/bfg/1.13.0/bfg-1.13.0.jar && \
 	apk del wget && \
